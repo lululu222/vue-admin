@@ -50,6 +50,23 @@ npm run build --report
 5. git push -u origin master
 6. 之后再推送直接 git push
 
+### 关于登录跳转
+登陆成功，进行跳转使用js编程式导航  this.$router.push({name: 'home'})
+App.vue是否有router-view
+新建home组件
+路由index.js进行配置
+
+保存token，用于验证
+在进入首页之前，判断是否有token，没有就直接跳转至登录页面
+
+退出功能：// 清除token，并增加提示，定向到登录
+
+### 关于侧边栏的路由
+1.侧边栏el-menu开启路由模式
+  因为组件要通过路由显示，所以在el-menu里面点击相应的文字，给其index添加有意义的名字，index值也-》path值
+2.建立好要添加的页面（例如users.vue）
+3.在哪里显示就要在哪里添加<router-view>
+4.在哪里显示，就在哪里配置子路由
 
 
 
