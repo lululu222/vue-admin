@@ -116,16 +116,19 @@ export default {
   methods: {
     loginOut () {
       // 清除token，并增加提示，定向到登录
-      localStorage.clear()
-      this.$alert('确定要退出登录吗', '提示', {
+      this.$confirm('确定要退出登录吗?', '提示', {
         confirmButtonText: '确定',
-        callback: action => {
-          this.$message({
-            type: 'info',
-            message: `退出成功`
-          })
-          this.$router.push({name: 'login'})
-        }
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        localStorage.clear()
+        this.$message({
+          type: 'success',
+          message: '退出成功!'
+        })
+        this.$router.push({name: 'login'})
+      }).catch(() => {
+        console.log('取消退出')
       })
     }
   }

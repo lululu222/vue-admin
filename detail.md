@@ -68,6 +68,21 @@ App.vue是否有router-view
 3.在哪里显示就要在哪里添加<router-view>
 4.在哪里显示，就在哪里配置子路由
 
+### 用户页面
+新增面包屑、input、button
+
+### 全局过滤器
+在main.js中设置过滤器
+
+### 分页相关
+handleSizeChange(val) //每页显示条数变化时触发
+handleCurrentChange(val)  //当前页改变时触发
+current-page：设置当前页是第几页
+page-sizes="[10, 20, 30， 40]" 每页多少条的数据数组
+page-size设置第一次运行时显示几条
+total 数据总条数
+因此每次要传pagesize和pagenum给后台
+current-page=pagenum
 
 
 
