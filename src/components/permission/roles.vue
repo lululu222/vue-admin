@@ -73,7 +73,7 @@
             <template slot-scope="scope">
                 <el-button type="primary" icon="el-icon-edit" size="mini" plain circle @click="edit(scope.row)"></el-button>
                 <el-button type="danger" icon="el-icon-delete" size="mini" plain circle @click="del(scope.row)"></el-button>
-                <el-button type="success" icon="el-icon-check" size="mini" plain circle @click="yes(scope.row)"></el-button>
+                <el-button type="success" icon="el-icon-check" size="mini" plain circle @click="yes(scope.row)"></el-button> 
             </template>
         </el-table-column>
       </el-table>
@@ -479,12 +479,12 @@ export default {
                   {
                     rowName: '删除财务',
                     id: '312',
-                    pid: '31'
+                    pid: '31',
                   },
                   {
                     rowName: '增加财务',
                     id: '313',
-                    pid: '31'
+                    pid: '31',
                   }
                 ]
               },
@@ -496,176 +496,176 @@ export default {
                   {
                     rowName: '审核引用',
                     id: '321',
-                    pid: '32'
+                    pid: '32',
                   },
                   {
                     rowName: '审核来源',
                     id: '322',
-                    pid: '32'
+                    pid: '32',
                   },
                   {
                     rowName: '审核用处',
                     id: '323',
-                    pid: '32'
+                    pid: '32',
                   }
                 ]
               }
             ]
-          }
+          },
         ]
       }],
       total: 0,
       pagenum: 1, // 指的就是第几页
       pagesize: 2, //
       dataTree: [
-        {
-          rowName: '主管',
-          id: '1',
-          pid: '0',
-          children: [
-            {
-              rowName: '商品管理',
-              id: '11',
-              pid: '1',
-              children: [
-                {
-                  rowName: '编辑商品',
-                  id: '111',
-                  pid: '11'
-                },
-                {
-                  rowName: '删除商品',
-                  id: '112',
-                  pid: '11'
-                },
-                {
-                  rowName: '增加商品',
-                  id: '113',
-                  pid: '11'
-                }
-              ]
-            },
-            {
-              rowName: '应用管理',
-              id: '12',
-              pid: '1',
-              children: [
-                {
-                  rowName: '编辑引用',
-                  id: '121',
-                  pid: '12'
-                },
-                {
-                  rowName: '删除应用',
-                  id: '122',
-                  pid: '12'
-                },
-                {
-                  rowName: '增加应用',
-                  id: '123',
-                  pid: '12'
-                }
-              ]
-            }
-          ]
-        },
-        {
-          rowName: '工作人员',
-          id: '2',
-          pid: '0',
-          children: [
-            {
-              rowName: '商品管理',
-              id: '21',
-              pid: '2',
-              children: [
-                {
-                  rowName: '编辑商品',
-                  id: '211',
-                  pid: '21'
-                },
-                {
-                  rowName: '增加商品',
-                  id: '212',
-                  pid: '21'
-                }
-              ]
-            },
-            {
-              rowName: '应用管理',
-              id: '22',
-              pid: '2',
-              children: [
-                {
-                  rowName: '编辑引用',
-                  id: '221',
-                  pid: '22'
-                },
-                {
-                  rowName: '增加应用',
-                  id: '222',
-                  pid: '22'
-                }
-              ]
-            }
-          ]
-        },
-        {
-          rowName: '财务',
-          id: '3',
-          pid: '0',
-          children: [
-            {
-              rowName: '财务管理',
-              id: '31',
-              pid: '3',
-              children: [
-                {
-                  rowName: '编辑财务',
-                  id: '311',
-                  pid: '31'
-                },
-                {
-                  rowName: '删除财务',
-                  id: '312',
-                  pid: '31'
-                },
-                {
-                  rowName: '增加财务',
-                  id: '313',
-                  pid: '31'
-                }
-              ]
-            },
-            {
-              rowName: '财务审核',
-              id: '32',
-              pid: '3',
-              children: [
-                {
-                  rowName: '审核引用',
-                  id: '321',
-                  pid: '32'
-                },
-                {
-                  rowName: '审核来源',
-                  id: '322',
-                  pid: '32'
-                },
-                {
-                  rowName: '审核用处',
-                  id: '323',
-                  pid: '32'
-                }
-              ]
-            }
-          ]
+          {
+            rowName: '主管',
+            id: '1',
+            pid: '0',
+            children: [
+              {
+                rowName: '商品管理',
+                id: '11',
+                pid: '1',
+                children: [
+                  {
+                    rowName: '编辑商品',
+                    id: '111',
+                    pid: '11',
+                  },
+                  {
+                    rowName: '删除商品',
+                    id: '112',
+                    pid: '11',
+                  },
+                  {
+                    rowName: '增加商品',
+                    id: '113',
+                    pid: '11',
+                  }
+                ]
+              },
+              {
+                rowName: '应用管理',
+                id: '12',
+                pid: '1',
+                children: [
+                  {
+                    rowName: '编辑引用',
+                    id: '121',
+                    pid: '12',
+                  },
+                  {
+                    rowName: '删除应用',
+                    id: '122',
+                    pid: '12',
+                  },
+                  {
+                    rowName: '增加应用',
+                    id: '123',
+                    pid: '12',
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            rowName: '工作人员',
+            id: '2',
+            pid: '0',
+            children: [
+              {
+                rowName: '商品管理',
+                id: '21',
+                pid: '2',
+                children: [
+                  {
+                    rowName: '编辑商品',
+                    id: '211',
+                    pid: '21',
+                  },
+                  {
+                    rowName: '增加商品',
+                    id: '212',
+                    pid: '21',
+                  }
+                ]
+              },
+              {
+                rowName: '应用管理',
+                id: '22',
+                pid: '2',
+                children: [
+                  {
+                    rowName: '编辑引用',
+                    id: '221',
+                    pid: '22',
+                  },
+                  {
+                    rowName: '增加应用',
+                    id: '222',
+                    pid: '22',
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            rowName: '财务',
+            id: '3',
+            pid: '0',
+            children: [
+              {
+                rowName: '财务管理',
+                id: '31',
+                pid: '3',
+                children: [
+                  {
+                    rowName: '编辑财务',
+                    id: '311',
+                    pid: '31',
+                  },
+                  {
+                    rowName: '删除财务',
+                    id: '312',
+                    pid: '31',
+                  },
+                  {
+                    rowName: '增加财务',
+                    id: '313',
+                    pid: '31',
+                  }
+                ]
+              },
+              {
+                rowName: '财务审核',
+                id: '32',
+                pid: '3',
+                children: [
+                  {
+                    rowName: '审核引用',
+                    id: '321',
+                    pid: '32',
+                  },
+                  {
+                    rowName: '审核来源',
+                    id: '322',
+                    pid: '32',
+                  },
+                  {
+                    rowName: '审核用处',
+                    id: '323',
+                    pid: '32',
+                  }
+                ]
+              }
+            ]
+          },
+        ],
+        defaultProps: {
+          children: 'children',
+          label: 'rowName'
         }
-      ],
-      defaultProps: {
-        children: 'children',
-        label: 'rowName'
-      }
     }
   },
   created () {
@@ -673,9 +673,9 @@ export default {
   },
   methods: {
     closeTag (role, id) {
-      // 点击删除后传角色id和相应的权限id
-      // 返回一个该角色的剩余所有权限
-      // 传给后台(role.date,id)=>获取res.data.data(新的所有权限)
+        //点击删除后传角色id和相应的权限id
+        //返回一个该角色的剩余所有权限
+      //传给后台(role.date,id)=>获取res.data.data(新的所有权限)
       //  role.children=res.data.data 就可以更新视图，免刷新，属于优化
       console.log(role.date.id)
     },
@@ -715,34 +715,38 @@ export default {
     yes (a) {
       console.log(a)
       this.dialogAdd = true
-      // 树形结构存在一个小bug，应该只需要最内层的就可以了
+      //树形结构存在一个小bug，应该只需要最内层的就可以了
       let newarr = []
       a.data.forEach(item1 => {
         //   newarr.push(item1.id)
-        item1.children.forEach(item2 => {
-          //   newarr.push(item2.id)
-          item2.children.forEach(item3 => {
-            newarr.push(item3.id)
+          item1.children.forEach(item2 => {
+            //   newarr.push(item2.id)
+              item2.children.forEach(item3 => {
+                  newarr.push(item3.id)
+              })
           })
-        })
       })
-      console.log(newarr, 444)
-      //   this.arrExpand = newarr
+      console.log(newarr,444)
+    //   this.arrExpand = newarr
       this.arrChoose = newarr
+      
+
     },
     del (a) {
       console.log(a)
     },
-    cacelTree () {
-      this.dialogAdd = false
-      this.arrChoose = []
+    cacelTree() {
+        this.dialogAdd = false;
+        this.arrChoose = []
+
     },
-    addTree () {
-      let arr1 = this.$refs.trees.getCheckedKeys()
-      let arr2 = this.$refs.trees.getHalfCheckedKeys()
-      let arr = [...arr1, ...arr2]
-      console.log(arr)
-      this.dialogAdd = false
+    addTree() {
+        //获取选中的所有节点id
+        let arr1 = this.$refs.trees.getCheckedKeys()
+        let arr2 = this.$refs.trees.getHalfCheckedKeys()
+        let arr = [...arr1,...arr2]
+        console.log(arr)
+        this.dialogAdd = false;
     }
 
   }
