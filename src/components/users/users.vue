@@ -8,10 +8,10 @@
       </el-breadcrumb>
     </div>
     <div>
-      <el-input placeholder="请输入内容" v-model="query" class="inputsearch">
-        <el-button slot="append" icon="el-icon-search"></el-button>
+      <el-input placeholder="请输入内容" v-model="query" class="inputsearch" clearable>
+        <el-button slot="append" icon="el-icon-search" @click="searchUser()"></el-button>
       </el-input>
-      <el-button type="success" plain>添加用户</el-button>
+      <el-button type="success" plain @click="addUser()">添加用户</el-button>
     </div>
     <div>
       <el-table
@@ -21,12 +21,12 @@
         <el-table-column
           type="index"
           label="序列"
-          width="180">
+          width="100">
         </el-table-column>
         <el-table-column
           prop="name"
           label="姓名"
-          width="180">
+          width="100">
         </el-table-column>
         <el-table-column
           prop="email"
@@ -54,9 +54,9 @@
           prop="address"
           label="操作">
             <template slot-scope="scope">
-                <el-button type="primary" icon="el-icon-edit" size="small" plain circle @click="edit(scope.row)"></el-button>
-                <el-button type="success" icon="el-icon-check" size="small" plain circle @click="yes(scope.row)"></el-button>
-                <el-button type="danger" icon="el-icon-delete" size="small" plain circle @click="del(scope.row)"></el-button>
+                <el-button type="primary" icon="el-icon-edit" size="mini" plain circle @click="edit(scope.row)"></el-button>
+                <el-button type="success" icon="el-icon-check" size="mini" plain circle @click="yes(scope.row)"></el-button>
+                <el-button type="danger" icon="el-icon-delete" size="mini" plain circle @click="del(scope.row)"></el-button>
             </template>
         </el-table-column>
       </el-table>
@@ -70,6 +70,27 @@
         :total="4">
       </el-pagination>
     </div>
+    <el-dialog title="添加用户" :visible.sync="dialogFormVisibleAdd">
+      <el-form :model="form">
+        <el-form-item label="姓名" label-width="100px">
+          <el-input v-model="form.name" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="手机号" label-width="100px">
+          <el-input v-model="form.tel" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="邮箱" label-width="100px">
+          <el-input v-model="form.email" autocomplete="off"></el-input>
+        </el-form-item>
+        <el-form-item label="地址" label-width="100px">
+          <el-input v-model="form.address" autocomplete="off"></el-input>
+        </el-form-item>
+      </el-form>
+      <div slot="footer" class="dialog-footer">
+        <el-button @click="cancelAdd()">取 消</el-button>
+        <el-button type="primary" @click="confirmAdd()">确 定</el-button>
+      </div>
+    </el-dialog>
+
   </el-card>
 </template>
 
@@ -77,6 +98,13 @@
 export default {
   data () {
     return {
+      form: {
+        name: '',
+        tel: '',
+        email: '',
+        address: ''
+      },
+      dialogFormVisibleAdd: false,
       query: '',
       tableData: [{
         date: 1486720211,
@@ -117,14 +145,35 @@ export default {
     this.initInfo()
   },
   methods: {
+    cancelAdd() {
+      this.dialogFormVisibleAdd = false
+      this.form = {}
+    },
+    confirmAdd() {
+      console.log(this.form)
+      //请求数据
+      //成功后从新获取页面
+      this.dialogFormVisibleAdd = false
+      this.form = {}
+    },
+    addUser () {
+      this.dialogFormVisibleAdd = true
+    },
+    searchUser () {
+      // 搜索用户
+    },
     initInfo () {
       this.total = this.tableData.length
     },
     handleSizeChange (val) { // 每页显示条数变化时触发
       console.log(`每页 ${val} 条`)
+      this.pagesize = val
+      this.initInfo()
     },
     handleCurrentChange (val) { // 当前页改变时触发
       console.log(`当前页: ${val}`)
+      this.pagenum = val
+      this.info()
     },
     edit (a) {
       console.log(a)
