@@ -145,14 +145,14 @@ export default {
     this.initInfo()
   },
   methods: {
-    cancelAdd() {
+    cancelAdd () {
       this.dialogFormVisibleAdd = false
       this.form = {}
     },
-    confirmAdd() {
+    confirmAdd () {
       console.log(this.form)
-      //请求数据
-      //成功后从新获取页面
+      // 请求数据
+      // 成功后从新获取页面
       this.dialogFormVisibleAdd = false
       this.form = {}
     },
