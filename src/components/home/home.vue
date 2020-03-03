@@ -56,7 +56,7 @@
                             <span>商品管理</span>
                         </template>
                         <el-menu-item-group>
-                            <el-menu-item index="1-1">
+                            <el-menu-item index="addgoods">
                                 <i class="el-icon-s-order"></i>
                                 <span>商品列表</span>
                             </el-menu-item>

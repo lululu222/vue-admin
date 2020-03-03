@@ -4,6 +4,7 @@ import Login from '@/components/login/login'
 import Home from '@/components/home/home'
 import Users from '@/components/users/users'
 import Roles from '@/components/permission/roles'
+import Addgoods from '@/components/goods/addgoods'
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +29,11 @@ export default new Router({
           name: 'roles',
           path: '/roles',
           component: Roles
+        },
+        {
+          name: 'addgoods',
+          path: '/addgoods',
+          component: Addgoods
         }
       ]
 
